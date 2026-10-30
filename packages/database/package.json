@@ -1,0 +1,23 @@
+{
+  "name": "@sms/database",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "scripts": {
+    "generate": "prisma generate",
+    "push": "prisma db push",
+    "migrate:dev": "prisma migrate dev",
+    "migrate:deploy": "prisma migrate deploy",
+    "studio": "prisma studio"
+  },
+  "devDependencies": {
+    "prisma": "^5.7.0"
+  },
+  "prisma": {
+    "schema": "./prisma/schema.prisma"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.22.0"
+  }
+}

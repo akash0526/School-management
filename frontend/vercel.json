@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "package.json", "use": "@vercel/nextjs-build" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "${NEXT_PUBLIC_API_URL}/api/$1" },
+    { "src": "/(.*)", "dest": "/" }
+  ],
+  "env": {
+    "NEXT_PUBLIC_API_URL": "@sms_api_url"
+  }
+}
